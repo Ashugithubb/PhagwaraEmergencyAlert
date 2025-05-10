@@ -229,11 +229,7 @@ th {
 
 .video-container iframe {
   width: 460px;
-  height: 39/* Reset browser default spacing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  height: 450/* Reset browser default spacing */
 }
 
 html, body {
