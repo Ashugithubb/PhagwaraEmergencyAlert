@@ -46,7 +46,7 @@
   <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; font-family: Arial, sans-serif;">
 
   <!-- Left Box: Air Raid Guidelines -->
-  <div style="flex: 1; min-width: 300px; background-color: #e6f7ff; padding: 20px; border-left: 6px solid #1890ff; border-radius: 5px;">
+  <div class="info-box blue-box" style="flex: 1; min-width: 300px; background-color: #e6f7ff; padding: 20px; border-left: 6px solid #1890ff; border-radius: 5px;">
     <h2>📢 Important Guidelines</h2>
     <ul style="padding-left: 20px; line-height: 1.6;">
       <li><strong>🚨 ਏਅਰ ਰੇਡ ਸਾਇਰਨ ਸਮੇਂ ਸੁਰੱਖਿਆ ਸਾਵਧਾਨੀਆਂ 🚨</strong></li>
@@ -60,7 +60,7 @@
   </div>
 
   <!-- Right Box: Cybersecurity Alert -->
-  <div style="flex: 1; min-width: 300px; background-color: #fff3cd; padding: 20px; border-left: 6px solid #ffa500; border-radius: 5px;">
+  <div class="info-box yellow-box" style="flex: 1; min-width: 300px; background-color: #fff3cd; padding: 20px; border-left: 6px solid #ffa500; border-radius: 5px;">
     <h3 style="color: #d9534f;">⚠️ Cybersecurity Alert: Pakistan Cyber Attack Threat</h3>
     <p>Do <strong>not</strong> open any suspicious or malicious files, links, or attachments—especially those with unknown titles or from untrusted sources.</p>
     <p><strong>Follow these guidelines to stay safe:</strong></p>
@@ -180,5 +180,19 @@
 
 
   <script src="script.js"></script>
+  <script>
+  const text = document.getElementById("marquee-text");
+  let pos = text.offsetLeft;
+
+  function scroll() {
+    pos--;
+    if (pos < -text.offsetWidth) {
+      pos = text.parentElement.offsetWidth;
+    }
+    text.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(scroll);
+  }
+  scroll();
+</script>
 </body>
 </html>

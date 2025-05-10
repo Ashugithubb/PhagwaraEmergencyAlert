@@ -428,4 +428,29 @@ th {
   }
 }
 
+.info-box {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border-left: 6px solid;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.info-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles */
+.blue-box {
+  background-color: #e6f7ff;
+  border-left-color: #1890ff;
+}
+
+.yellow-box {
+  background-color: #fff3cd;
+  border-left-color: #ffa500;
+}
 
